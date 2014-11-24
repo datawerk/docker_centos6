@@ -14,3 +14,8 @@ rm /tmp/etcd-v0.4.6-linux-amd64.tar.gz
 RUN wget https://github.com/kelseyhightower/confd/releases/download/v0.6.3/confd-0.6.3-linux-amd64 -O /usr/bin/confd && \
 chmod +x /usr/bin/confd && \
 mkdir -p /etc/confd/{conf.d,templates}
+
+mkdir -p /var/log/supervisor && mkdir -p /etc/supervisor/conf.d
+
+# supervisor base configuration
+ADD supervisord.conf /etc/supervisord.conf
