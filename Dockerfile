@@ -17,6 +17,6 @@ mkdir -p /etc/confd/{conf.d,templates}
 
 mkdir -p /var/log/supervisor && mkdir -p /etc/supervisor/conf.d
 
-easy_install supervisor
+RUN easy_install supervisor
 
 ADD supervisord.conf /etc/supervisord.conf
